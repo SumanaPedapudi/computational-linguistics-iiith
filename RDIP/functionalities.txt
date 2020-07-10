@@ -1,0 +1,7 @@
+1.Displaying random jumbled sentences after selecting the language.
+2.Displaying Formed Sentence(after selecting words) and Re-form the sentence button when atleast one word of jumbled sentence is clicked.
+3.When Re-form the sentence is clicked the words arranged in formed dentence should go back to original positions.
+4.After forming a sentence with all the jumbled words Check the correctness of this sentence button should be displayed.
+5.If the sentence is correct Get Correct Sentence button need to hide else it should be displayed.
+6.When Get Correct Sentence button is clicked it should be change to Hide the correct Sentence.
+7.Hide the correct Sentence when clicked should be changed to Get Answers and vice-versa.
