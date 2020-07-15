@@ -5,10 +5,11 @@
 	font-size: x-large;
 	margin-left: 50px;
 }
-#ds{
+#ds,#fs{
 	color: darkblue;
 	text-align: center;
 	display: block;
+	font-weight: bold;
 }
 #ds1{
 	color: blue;
@@ -18,4 +19,15 @@
 button{
 	margin-left: 50px;
 	align:center;
+}
+#ss1{
+	display: block;
+	font-size: xx-large;
+	font-weight: bold;
+	color:gray;
+	font-family: "Lucida Grande",sans-serif;
+}
+#rf{
+	display: block;
+	text-align: center;
 }
