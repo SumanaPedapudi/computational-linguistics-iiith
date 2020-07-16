@@ -16,9 +16,13 @@
 	text-align: center;
 	display: block;
 }
+span{
+	display: block;
+	text-align: center;
+}
 button{
 	margin-left: 50px;
-	align:center;
+	text-align: center;
 }
 #ss1{
 	display: block;
@@ -26,8 +30,4 @@ button{
 	font-weight: bold;
 	color:gray;
 	font-family: "Lucida Grande",sans-serif;
-}
-#rf{
-	display: block;
-	text-align: center;
 }
