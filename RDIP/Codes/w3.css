@@ -26,8 +26,19 @@ button{
 }
 #ss1{
 	display: block;
-	font-size: xx-large;
+	font-size: 30px;
 	font-weight: bold;
 	color:gray;
-	font-family: "Lucida Grande",sans-serif;
+	font-family:sans-serif;
+}
+#r{
+	display: block;
+	font-size:xx-large;
+	color: green;
+}
+#w{
+	display: block;
+	text-align: center;
+	font-size: xx-large;
+	color: red;
 }
