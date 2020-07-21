@@ -24,9 +24,8 @@ function display(a){
 		alert("Select language");
 	}
 }
-
 function es() {
-	// body...
+	// body..
 	var a = Math.floor(Math.random()*se.length);
     var b =se[a];
     var c = s(b);
@@ -91,12 +90,15 @@ function button(n) {
      document.getElementById("w").innerHTML = " "
      $("#rf").hide();
      $("#cc").hide();
+     $("#gcs").hide()
+     $("#cs").hide();
      $("#rf").click(function(){
 		$("#ss1").hide();
 		$("#fs").hide();
 		$("#rf").hide();
 		$("#cc").hide();
 		$("#gcs").hide();
+		$("#cs").hide();
 		b();
 		a();
 		$("#ss1").show();
@@ -122,12 +124,21 @@ function button(n) {
 							$("#r").show()
 							$("#w").hide();
 							document.getElementById("r").innerHTML = "Right answer!!!"
+							$("#cc").click(function(){
+								$("#w").hide();
+								$("#gcs").hide()
+								$("#cs").hide()
+							})
+							$("#gcs").hide();
+							$("#cs").hide()
+							
 						}
 						else{
 							$("#w").show();
-							$("#gcs").show();
 							document.getElementById("w").innerHTML = "Wrong answer!!!"
-							document.getElementById("gcs").innerHTML= "Get Correct Sentence"
+							$("#gcs").show();
+							dis();
+							csen(s1)
 						}
 					}
 					else{
@@ -141,18 +152,103 @@ function button(n) {
 						if(cn1 == 1){
 							$("#r").show()
 							$("#w").hide();
-							$("#gcs").hide();
+							document.getElementById("gcs").innerHTML = null;
 							document.getElementById("r").innerHTML = "Right answer!!!"
+							$("#cs").hide()
+							$("#cc").click(function(){
+								$("#w").hide();
+								$("#gcs").hide()
+								$("#cs").hide()
+							})
 						}
 						else{
 							$("#w").show();
-							$("#gcs").show();
 							document.getElementById("w").innerHTML = "Wrong answer!!!"
-							document.getElementById("gcs").innerHTML= "Get Correct Sentence"
+							$("#gcs").show();
+							dis();
+							csen(s1)
 						}
 					}
 					})
 				}
+				function csen(s){
+				$("#gcs").click(function(){
+						var sp =s.split(" ");
+						var arr = sp;
+						var count = 0;
+						var ind = document.getElementById("select").selectedIndex;
+						var val = document.getElementById("select")[ind].value;
+						if(val == "eng"){
+							for (var j = 0; j < 10; j++) {
+								for(var i = 0;i < arr.length;i++){
+									if(se[j].search(arr[i]) >= 0){
+										count++;
+									}
+								}
+								if(count != arr.length){
+									count = 0;
+								}
+								else if(count == arr.length){
+									var v = j;
+									var s1 = e1[v];
+									document.getElementById("cs").innerHTML = " "
+									for(var k = 0;k < s1.length;k++){
+										document.getElementById("cs").innerHTML += s1[k]+"<br>"
+									}
+									break;
+								}
+							}
+						}
+						if(val == "hin"){
+							for (var j = 0; j < 7; j++) {
+								for(var i = 0;i < arr.length;i++){
+									if(sh[j].search(arr[i]) >= 0){
+										count++;
+									}
+								}
+								if(count != arr.length){
+									count = 0;
+								}
+								if(count == arr.length){
+									var v1 = j;
+									var s2 = h1[v1];
+									document.getElementById("cs").innerHTML = " "
+									for(var k = 0;k < s2.length;k++){
+										document.getElementById("cs").innerHTML += s2[k]+"<br>"
+									}
+									break;
+								}
+							}
+						}
+				})
+			}
+				function dis(){
+					document.getElementById("gcs").innerHTML = "Get correct Sentence"
+					$("#gcs").click(function(){
+								$("#cs").show()
+								document.getElementById("gcs").innerHTML = "Hide the correct Sentence"
+								h();
+								function h(){
+									if(document.getElementById("gcs").innerHTML == "Hide the correct Sentence"){
+											$("#gcs").click(function(){
+											$("#cs").hide();
+											document.getElementById("gcs").innerHTML="Get Answers"
+											s();
+										})
+										}
+									}
+									function s(){
+										if(document.getElementById("gcs").innerHTML == "Get Answers"){
+											$("#gcs").click(function(){
+											$("#cs").show();
+											document.getElementById("gcs").innerHTML = "Hide the correct Sentence"
+											h();
+									})
+								}
+									}
+							})
+				
+			}
 			}
      }
      a();
