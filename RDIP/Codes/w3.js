@@ -137,6 +137,9 @@ function button(n) {
 							$("#w").show();
 							document.getElementById("w").innerHTML = "Wrong answer!!!"
 							$("#gcs").show();
+							$("#rf").click(function(){
+								document.getElementById("gcs").innerHTML = "Get Correct Senctence"
+							})
 							dis();
 							csen(s1)
 						}
@@ -151,20 +154,23 @@ function button(n) {
 						}
 						if(cn1 == 1){
 							$("#r").show()
-							$("#w").hide();
 							document.getElementById("gcs").innerHTML = null;
 							document.getElementById("r").innerHTML = "Right answer!!!"
+							$("#gcs").hide();
 							$("#cs").hide()
+							$("#w").hide();
 							$("#cc").click(function(){
 								$("#w").hide();
 								$("#gcs").hide()
-								$("#cs").hide()
 							})
 						}
 						else{
 							$("#w").show();
 							document.getElementById("w").innerHTML = "Wrong answer!!!"
 							$("#gcs").show();
+							$("#rf").click(function(){
+								document.getElementById("gcs").innerHTML = "Get Correct Senctence"
+							})
 							dis();
 							csen(s1)
 						}
@@ -223,7 +229,6 @@ function button(n) {
 				})
 			}
 				function dis(){
-					document.getElementById("gcs").innerHTML = "Get correct Sentence"
 					$("#gcs").click(function(){
 								$("#cs").show()
 								document.getElementById("gcs").innerHTML = "Hide the correct Sentence"
