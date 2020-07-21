@@ -1,9 +1,17 @@
 .exp{
 	font-family: sans-serif;
+	color: #B71C1C;
 }
 #e{
-	font-size: x-large;
+	font-size: xx-large;
 	margin-left: 50px;
+}
+body{
+	background-image: url("https://i.pinimg.com/originals/d6/cb/9a/d6cb9af1afb3159b73797316d916c402.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: auto;
 }
 #ds,#fs{
 	color: darkblue;
@@ -52,4 +60,8 @@ button{
 	display: block;
 	text-align: center;
 	margin:auto;
+}
+#ss1{
+	color: black;
+
 }
